@@ -39,11 +39,11 @@ module.exports = (request, response) => {
                 break;
             case '/carros':
                 response.writeHead(200, {'Content-Type': 'text/html'});
-                response.end(readFile("carros.html"));
+                response.end(readFile("carros.html").replace("{$table}", ''));
                 break;
             case '/usuarios':
                 response.writeHead(200, {'Content-Type': 'text/html'});
-                response.end(readFile("usuarios.html"));
+                response.end(readFile("usuarios.html").replace("{$table}", ''));
                 break;
             default:
                 break;
